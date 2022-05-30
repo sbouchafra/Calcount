@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalCount</title>
+    <link rel="stylesheet" href="Calcount-style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header></header>
+    <div class="bg"></div>
+
+    <nav id="topnav">
+      <ul class="nav-structure">
+        <a class="nav-link" href="#">
+          <img src="lCalcount-logo.jpg" class="img-fluid" />
+        </a>
+        <a id="logo" class="nav-link" href="#">CalCount</a>
+        <a class="nav-link" href="#">Dairy</a>
+        <a class="nav-link" href="#">Progress</a>
+        <a class="nav-link" href="#">Settings</a>
+      </ul>
+    </nav>
+
+    <h4 class="foodinput">Food Input</h4>
+    <form>
+      <label for="Name"> Food Name:</label>
+      <input type="text" id="Name" name="Name" /><br /><br />
+      <label for="Calories"> Number of Calories:</label>
+      <input type="text" id="Calories" name="Calories" /><br /><br />
+
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Categorie</option>
+        <option value="1">Breakfast</option>
+        <option value="2">Lunch</option>
+        <option value="3">Snacks</option>
+        <option value="4">Dinner</option></select
+      ><br /><br />
+      <button type="button" class="btn btn-primary">Save</button>
+    </form>
+
+    <h4 class="Listoffood">List of food</h4>
+
+    <div id="card-group"></div>
+
+    <h4 class="dailytotals">Daily Totals</h4>
+    <h5 class="totalcal">Total Calories 1435Cal</h5>
+    <footer></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="CalCount.js"></script>
+  </body>
+</html>
