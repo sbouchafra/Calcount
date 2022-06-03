@@ -1,7 +1,7 @@
 const foods = [
   {
     name: "Turkey Egg Omlet",
-    calories: 340,
+    calories: 420,
     category: "Breakfast",
   },
   {
@@ -98,11 +98,6 @@ function run() {
   //Create a card for each meal
   let html = ``;
   categories.forEach((meal) => {
-    // meal.name is available here
-    // use meal name to get list of foods for that meal
-    // for each meal food, create HTML (just like how we did for cards - add to a string)
-    // pass the food HTML to the createCard function as a second argument
-    // use the new food HTML argument in the createCard function as a template variable in place of the hard-coded food
     const cardHtml = createCard(meal);
     html = html + cardHtml;
   });
@@ -117,3 +112,33 @@ function getMealFoods(foodArray, mealName) {
     return foodObject.category === mealName;
   });
 }
+
+// insert text to html including the sum
+function dailyTotalCal() {
+  let sum = 0;
+  foods.forEach((element) => {
+    sum += element.calories;
+  });
+
+  const html = `
+    <h4 id="dailytotals">Daily Totals</h4>
+    <h5 class="totalcal">Total Calories: ${sum} Cal</h5>`;
+  return html;
+}
+
+// create html for the total calories
+function run1() {
+  const elem = document.getElementById("dailytotals");
+  let html = ``;
+  const dailyTot = dailyTotalCal();
+  html = html + dailyTot;
+  elem.innerHTML = html;
+}
+
+run1();
+
+// make my save button dynamic and input
+//save the data given to the variables foods with push method
+// show the saved objects to the matching list of food category
+
+const foodInputName = document.getElementById(`Name`).value;
