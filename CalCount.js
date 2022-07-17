@@ -141,4 +141,23 @@ run1();
 //save the data given to the variables foods with push method
 // show the saved objects to the matching list of food category
 
-const foodInputName = document.getElementById(`Name`).value;
+function save(foods) {
+  `<form>
+      <label for="Name"> Food Name:</label>
+      <input type="text" id="${Name}" name="Name" /><br /><br />
+      <label for="Calories"> Number of Calories:</label>
+      <input type="text" id="Calories" name="Calories" /><br /><br />
+
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Categorie</option>
+        <option value="1">Breakfast</option>
+        <option value="2">Lunch</option>
+        <option value="3">Snacks</option>
+        <option value="4">Dinner</option></select
+      ><br /><br />
+      <button onclick="Save ()" class="Save">Save</button>
+    </form>`;
+
+  const foodInputName = document.getElementById(`Name`).value;
+}
+save();
